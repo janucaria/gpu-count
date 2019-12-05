@@ -26,12 +26,12 @@ docker build -t janucaria/gpu-count -f cuda-10-2.dockerfile .
 
 ## Run container docker dengan GPU enabled
 ```
-docker run --rm --gpus all -it januar/mxnet-gpu-debug bash -c "nvidia-smi; gpu-count"
+docker run --rm --gpus all -it janucaria/gpu-count bash -c "nvidia-smi; gpu-count"
 ```
 
 jika gagal bisa ganti `--gpus all` menjadi `--runtime nvidia`
 ```
-docker run --rm --runtime nvidia -it januar/mxnet-gpu-debug bash -c "nvidia-smi; gpu-count"
+docker run --rm --runtime nvidia -it janucaria/gpu-count bash -c "nvidia-smi; gpu-count"
 ```
 ## Output
 Expected output similar like this
