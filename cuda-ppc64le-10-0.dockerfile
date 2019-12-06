@@ -6,7 +6,7 @@ RUN apt-get update \
   && echo "deb https://developer.download.nvidia.com/compute/cuda/repos/ubuntu1804/ppc64el /" > /etc/apt/sources.list.d/cuda.list \
   && echo "deb https://developer.download.nvidia.com/compute/machine-learning/repos/ubuntu1804/ppc64el /" > /etc/apt/sources.list.d/nvidia-ml.list \
   && apt-get update \
-  && apt-get install cuda-compat-10-2 \
+  && apt-get install cuda-compat-10-0 \
   && apt-get purge --autoremove -y curl \
   && rm -rf /var/lib/apt/lists/* \
   && true
